@@ -4,6 +4,5 @@ numpy
 matplotlib
 pickle
 seaborn
-sklearn
 scikit-learn
 mlxtend
