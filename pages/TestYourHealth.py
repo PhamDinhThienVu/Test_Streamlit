@@ -1,6 +1,21 @@
 import streamlit as st
 import pickle
 import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn import preprocessing
+from sklearn.preprocessing import LabelEncoder
+from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.metrics import classification_report,confusion_matrix,accuracy_score
+from sklearn.preprocessing import StandardScaler
+from sklearn.feature_selection import SelectKBest, f_classif, chi2
+from sklearn.model_selection import  RandomizedSearchCV, train_test_split , GridSearchCV
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
+from mlxtend.plotting import plot_confusion_matrix
 #Manage page link - nav bar to move on another pages
 
 with st.sidebar:
