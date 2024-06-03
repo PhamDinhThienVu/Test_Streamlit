@@ -22,25 +22,25 @@ with st.sidebar:
 
   st.header('Outline', divider='rainbow')
 
-  st.page_link(page = "pages/Problems.py", 
+  st.page_link(page = "./pages/Problems.py", 
              label="Problems")
 
-  st.page_link(page = "pages/AboutData.py", 
+  st.page_link(page = "./pages/AboutData.py", 
              label="About Data")
 
-  st.page_link(page = "pages/AnalysData.py", 
+  st.page_link(page = "./pages/AnalysData.py", 
              label="Data Analysis")
   
-  st.page_link(page = "pages/TestYourHealth.py", 
+  st.page_link(page = "./pages/TestYourHealth.py", 
              label="Test Your Health")
   
   
 def load_data():
-  with open('models/model_binary.pkl', 'rb') as file:
+  with open('./models/model_binary.pkl', 'rb') as file:
     data = pickle.load(file)
     return data
 def load_data2():
-  with open('models/model_multiclass.pkl', 'rb') as file:
+  with open('./models/model_multiclass.pkl', 'rb') as file:
     data = pickle.load(file)
     return data
 data = load_data();
