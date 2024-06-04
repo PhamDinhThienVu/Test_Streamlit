@@ -6,4 +6,4 @@ seaborn
 scikit-learn
 mlxtend
 streamlit_chat
-google.gểnativeai
+google.generativeai
