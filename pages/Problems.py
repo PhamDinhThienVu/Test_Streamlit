@@ -65,22 +65,24 @@ model = genai.GenerativeModel(
 
 
 
-with st.container():
-  st.title("Hỏi đáp về bệnh viêm gan C với chatbot AI")
+st.title("Hỏi đáp về bệnh viêm gan C với chatbot AI")
     
     # Chatbot functionality
-  if 'messages' not in st.session_state:
+if 'messages' not in st.session_state:
     st.session_state.messages = []
 
-  user_input = st.text_input("Bạn:", key="input")
-
-  if user_input:
+user_input = st.text_input("Bạn:", key="input")
+if user_input:
+      user_input = str(user_input)
       st.session_state.messages.append({"role": "user", "content": user_input})
-
         # Get response from Google Generative AI
       chat_session = model.start_chat(history=[])
-      response = chat_session.send_message(f"{user_input}")
-        
+      if len(user_input) > 0 and user_input.strip():  # Check for empty or whitespace-only input
+        response = chat_session.send_message(f"{user_input}")
+      else:
+    # Handle invalid input case, like showing an error message to the user
+        print("Please enter a valid input.")
       st.session_state.messages.append({"role": "bot", "content": response.text})
-  for msg in st.session_state.messages:
+for msg in st.session_state.messages:
     message(msg['content'], is_user=msg['role'] == 'user')
+  
