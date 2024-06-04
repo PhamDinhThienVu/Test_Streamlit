@@ -24,7 +24,7 @@ with st.sidebar:
 
   
 # Google AI API Key configuration
-api_key = "AIzaSyD9hip2uFzFlvarsdY7QJKT8mWs2nt3AdQ"
+api_key = "AIzaSyAGrAPMieSXHB5cGgUggVTadakYgUVrUq8"
 genai.configure(api_key=api_key)
 
 # Create the model
@@ -72,6 +72,7 @@ if 'messages' not in st.session_state:
     st.session_state.messages = []
 
 user_input = st.text_input("Bạn:", key="input")
+
 if user_input:
       user_input = str(user_input)
       st.session_state.messages.append({"role": "user", "content": user_input})
