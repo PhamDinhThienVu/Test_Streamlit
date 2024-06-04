@@ -5,3 +5,5 @@ matplotlib
 seaborn
 scikit-learn
 mlxtend
+streamlit_chat
+google.generativeai
