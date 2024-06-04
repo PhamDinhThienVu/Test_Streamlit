@@ -24,7 +24,7 @@ with st.sidebar:
 
   
 # Google AI API Key configuration
-api_key = "AIzaSyCY3PsLzWeM9gUa807ypz5atI4GMO6cjGc"
+api_key = "AIzaSyD9hip2uFzFlvarsdY7QJKT8mWs2nt3AdQ"
 genai.configure(api_key=api_key)
 
 # Create the model
@@ -35,6 +35,7 @@ generation_config = {
     "max_output_tokens": 8192,
     "response_mime_type": "text/plain",
 }
+
 safety_settings = [
     {
         "category": "HARM_CATEGORY_HARASSMENT",
